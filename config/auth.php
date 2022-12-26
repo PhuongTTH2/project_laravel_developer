@@ -42,8 +42,12 @@ return [
         ],
         'admin' => [
             'driver' => 'session',
-            'provider' => 'admins',
+            'provider' => 'admin',
         ],
+        // 'api' => [
+        //     'driver' => 'token',
+        //     'provider' => 'users',
+        // ],
     ],
 
     /*
@@ -113,6 +117,12 @@ return [
     |
     */
 
-    'password_timeout' => 10800,
+    'passwords' => [
+        'users' => [
+            'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+    ],
 
 ];

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use App\Providers\RouteServiceProvider;
 
 class AuthController extends Controller
 {
@@ -21,12 +22,12 @@ class AuthController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('guest:admin')->except('logout');
+       $this->middleware('guest:admin')->except('logout');
     }
 
-    // protected function guard(){
-    //     return Auth::guard('admin');
-    // }
+    protected function guard(){
+        return Auth::guard('admin');
+    }
 
     public function showLoginForm() {
         return view('admin.login');
@@ -35,5 +36,10 @@ class AuthController extends Controller
     public function username()
     {
         return 'account';
+    }
+
+    public function logout(Request $request) {
+        Auth::guard('admin')->logout();
+        return redirect()->route('admin.login');
     }
 }
