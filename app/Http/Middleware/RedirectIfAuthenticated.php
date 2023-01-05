@@ -20,6 +20,7 @@ class RedirectIfAuthenticated
     public function handle(Request $request, Closure $next, ...$guards)
     {
         $guards = empty($guards) ? [null] : $guards[0];
+        // dd($guards);
         switch ($guards) {
             case 'admin' :
                 if (Auth::guard($guards)->check()) {
