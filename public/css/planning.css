@@ -1,0 +1,451 @@
+@charset "utf-8";
+
+
+/* プラン一覧 */
+
+.container .contents_title {
+    margin: 30px 0 !important;
+    border-bottom: solid 1px #7f7f7f;
+    padding: 0px 30px 0px 30px !important;
+}
+
+.container label {
+  /*color: #4d4d4d;*/
+  color:#333;
+  margin-right: 10px;
+  margin-bottom:0;
+}
+.form-group{
+ /*padding:0 1em 0.5em 0;*/
+}
+
+#contents_header{
+ padding:10px 13px;
+}
+
+.application > form > div {
+    display: inline-block;
+    padding: 10px 30px;
+}
+
+#plan_table table thead {
+  background-color: #10a8c4;
+  color: #fff;
+}
+#plan_table table > thead th{
+   text-align:center;
+}
+
+#plan_table table td {
+    background-color: #fff;
+    padding-left: 4px;
+}
+td.btn_td{
+ white-space:nowrap;
+}
+td.btn_td input{
+ margin:0 0.5rem;
+}
+
+/* プラン条件設定 */
+.container h2{
+ font-size:1.2em;
+ color: #4d4d4d;
+ font-weight:bold;
+ border-bottom:1px solid #4d4d4d;
+}
+.form-inline{
+ margin-bottom:1em;
+}
+@media (min-width: 768px){
+.container .form-inline .form-group {
+ margin-bottom:1em;
+}
+}
+.required{
+ color:#c00;
+ vertical-align:bottom;
+}
+.container .label{
+ font-size:8px;
+ padding:0.1em 0.3em;
+ line-height:8px;
+ vertical-align:middle;
+ margin-left:0.5em;
+ width:2em;
+ font-weight:400;
+}
+.all_check{
+ margin-left:30px;
+}
+.sub_title{
+ display:inline-block;
+ vertical-align:top;
+ padding-top:0.3em;
+ padding-bottom:0.5em;
+}
+.sub_contents{
+ display:inline-block;
+ vertical-align:top;
+}
+
+#target-summary{
+ font-size: 1.1rem;
+}
+
+/* モーダル */
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+#new_pattern{
+ display:none;
+}
+#new_pattern input{
+ border:1px solid #4d4d4d;
+}
+#new_pattern .iziModal-content, .duplicate_alert .iziModal-content {
+    padding: 30px !important;
+    overflow:auto;
+}
+
+#new_pattern.container .timeCheck input[type=checkbox]{
+ display:none;
+}
+#new_pattern_block,#calendar_pattern_block{
+ position:relative;
+}
+#new_pattern_block div.timeCheck{
+ cursor:pointer;
+}
+#calendar_pattern_block div.weekDayBlock div{
+ font-size:12px;
+ width:40px;
+}
+#new_pattern_block{
+  margin:1em auto;
+}
+#new_pattern_block div{
+ width:30px;
+}
+
+#calendar_pattern_block{
+ margin: 40px auto 1em;
+}
+
+#new_pattern_block div.weekDayBlock,
+#calendar_pattern_block div.weekDayBlock{
+ float:left;
+}
+
+
+#calendar_block{
+ overflow:auto;
+ display: flex;
+ flex-wrap: nowrap;
+}
+#calendar_block div.weekDayBlock{
+
+}
+#calendar_block div.weekDayBlock .weekDay{
+ white-space: nowrap;
+ text-align:center;
+ padding:0 0.2em;
+}
+
+.ui-draggable-dragging{
+ opacity:0;
+}
+#new_pattern_block .timeCheck input{
+/* display:none;*/
+}
+#new_pattern_block div.weekDayBlock{
+  width:80px;
+}
+#new_pattern_block div.weekDayBlock div{
+ border:1px solid #f0f0f0;
+ width:80px;
+ text-align:center;
+}
+
+#calendar_pattern_block div.weekDayBlock div{
+  border:1px solid #f0f0f0;
+}
+#new_pattern_block #timeHour{
+  width:4em;
+}
+#new_pattern_block #timeHour div{
+ text-align:right;
+ width:4em;
+ padding-right:0.5em;
+}
+#new_pattern_block #timeHour div.noTime{
+ border:1px solid #fff;
+}
+#new_pattern_block .weekDayBlock.Sat .weekDay,
+#calendar_block .weekDayBlock.Sat .weekDay{
+ background:#06F;
+}
+#new_pattern_block .weekDayBlock.Sun .weekDay,
+#calendar_block .weekDayBlock.Sun .weekDay{
+ background:#FCF;
+}
+#new_pattern_block .selected,
+#calendar_pattern .selected,
+#calendar_block .selected{
+ background:#09C;
+}
+
+/* canvas */
+/*#drawRange{
+ background:#f00;
+ opacity:0.5;
+}*/
+#drawRange #Rect{
+ background:#000;
+}
+
+/* パターン削除、新規パターン登録*/
+#del_pattern_btn.btn_S,
+#new_pattern_btn.btn_S,
+#calendar_pattern_btn.btn_S,
+#target_setting_btn.btn_S{
+ color:#333 !important;
+ border:solid 1px #333;
+}
+#del_pattern_btn.btn_S:disabled {
+  color: #999 !important;
+  border:solid 1px #ccc;
+  background-color: #f6f6f6 !important;
+}
+#target_setting_btn.btn_S{
+ color:#fff !important;
+ border:solid 1px #333;
+ background-color:#000 !important
+
+}
+#target_setting_btn.btn_S:hover{
+  background-color:#333 !important
+}
+
+/* プラン結果 */
+.container #plan_result input[type=checkbox] + label,
+.container #plan_result input[type=radio] + label{
+ cursor:default;
+}
+#plan_result .select_container::after {
+ border:none;
+}
+
+#plan_result .select_cart .select_container::after {
+ border-top: solid 5px #4d4d4d;
+ border-right: solid 4px transparent;
+ border-left: solid 4px transparent;
+}
+#plan_result #target-summary{
+ font-size:11px;
+}
+
+.accordion-inner{
+ display:none;
+}
+#plan_result h2.accordion{
+ cursor:pointer;
+}
+h2 span{
+ display:block;
+ float:right;
+ margin-right:1em;
+}
+.plan_result_table{
+}
+.plan_result_table th,
+.plan_result_table td{
+ padding:0.5em 1em;
+}
+.plan_result_table th{
+ border: 2px solid #fff;
+ background-color: #666;
+ color:#fff;
+}
+.plan_result_table td{
+ background-color: #fff;
+}
+.plan_result_table tr.plan_head td{
+ background-color: #666;
+ color: #fff;
+ font-weight: bold;
+}
+.plan_result_table tbody td{
+ border: 1px solid #fff;
+}
+.plan_result_table tr.plan_foot td{
+ background-color: #ccc;
+ font-weight: bold;
+ /*font-size:1.5rem;*/
+}
+
+.container .position_list_control_wrap ul {
+    /*width: 50%;*/
+    float: right;
+    text-align: right;
+}
+
+.position_list_table{
+ width:100%;
+ font-size:12px;
+}
+.position_list_table th{
+ background-color: #666;
+ color: #fff;
+ font-weight:normal;
+ vertical-align:middle;
+ text-align:center;
+}
+.position_list_table tr{
+ height: 35px;
+}
+.position_list_table td{
+ /*background-color: #fff;*/
+}
+.position_list_table th,
+.position_list_table td{
+ border: 1px solid #fff;
+ padding:0.5em 0.2em;
+}
+th.non-th{
+ background:none;
+ border:none;
+ text-align:left;
+ color:#333;
+}
+.position_list_table th a{
+ color:#fff;
+ font-weight:normal;
+ line-height:0.5em;
+}
+.position_list_table th td.non-th{
+}
+.position_list_table input[type=checkbox] + label {
+    margin-left: 27px;
+    margin-bottom:15px;
+}
+
+
+.list_control_btn ul{
+  float: right;
+  text-align: right;
+}
+#target-main{
+ display:table-cell;
+ padding-right:2em;
+}
+#target-sub{
+ display:table-cell;
+}
+
+/*ダイアログ*/
+#target_setting_content{
+ margin-top:30px;
+ margin-left:30px;
+}
+#target_setting_content .form-group label:first-child{
+ width:120px;
+}
+#target_setting_content .form-group select{
+ border:solid 1px #7f7f7f;
+}
+#target_setting_content .form-group .disabled.select_container::after {
+ border:none;
+}
+
+.planning_modal .iziModal-content,
+.duplicate_alert .iziModal-content {
+    padding: 30px !important;
+    text-align: center;
+    overflow: scroll;
+}
+.planning_modal .iziModal-content input[type="text"]{
+    border: solid 1px #7f7f7f;
+    margin-left: 15px;
+}
+.planning_modal .iziModal-content .btn_box {
+    margin-top: 12px;
+}
+.planning_modal {
+    -ms-overflow-style: none;
+}
+
+
+#contents .container input[type=checkbox] + label::before,
+#contents .container input[type=radio] + label::before {
+  top:1px;
+}
+#contents .container input[type=radio] + label::after{
+  top: 3px;
+}
+
+.allow-onair-date {
+    float: right;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/* positon sticky */
+#sticky-block{
+position:sticky;
+top:50px;
+z-index:2;
+background:#f5f5f5;
+padding-top:5px;
+}
+#sticky-hide-table{
+margin-top:-68px;
+}
+#sticky-hide-th th{
+border-width:0;
+visibility:hidden;
+border:hidden;
+border-collapse:separate;
+border-color:#f00;
+}
+#sticky-hide-table th#sticky-hide-th{
+}
+
+/* プランニング結果 */
+#plan_result_block{
+  min-width: 1000px;
+}
+#list_control_head_table{
+  padding-top: 20px;
+}
+@media screen and (max-width:1350px) { 
+  #plan_result_table, #plan_result_table.plan_foot{
+    font-size:10px;
+  }
+  #target-summary div{
+    font-size: 10px;
+    width: 210px;
+  }
+}
+@media screen and (min-width:1351px) and (max-width:1699px) { 
+  #plan_result_table, #plan_result_table.plan_foot{
+    font-size:11px;
+  }
+  #target-summary div{
+    font-size: 11px;
+    width: 220px;
+  }
+}
+@media screen and (min-width:1700px) {
+  #plan_result_table, #plan_result_table.plan_foot{
+    font-size:14px;
+  }
+  #target-summary div{
+    font-size: 12px;
+    width: 300px;
+  }
+
+}

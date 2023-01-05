@@ -1,0 +1,16 @@
+.file_uploader {
+    display: inline-block;
+    height: 30px;
+    width: 50px;
+    background-color: #2483c5;
+    color: #fff;
+    vertical-align: middle;
+    margin-left: -40px;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 0 18px 18px 0;
+    -webkit-border-radius: 0 18px 18px 0;
+    -moz-border-radius: 0 18px 18px 0;
+    padding-top: 5px;
+}

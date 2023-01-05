@@ -1,0 +1,78 @@
+.file_reference {
+    display: inline-block;
+    height: 30px;
+    width: 50px;
+    background-color: #2483c5;
+    color: #fff;
+    vertical-align: middle;
+    margin-left: -40px;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 0 18px 18px 0;
+    -webkit-border-radius: 0 18px 18px 0;
+    -moz-border-radius: 0 18px 18px 0;
+    padding-top: 5px;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #e1f3ff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    width:70%;
+}
+.panel-default>.panel-heading {
+    color: #000;
+    background-color: #a2d6f9 !important;
+    border-color: #ddd;
+}
+
+.divTable{
+    display: table;
+    width: auto;
+    background-color: #fff;
+    color:#000;
+}
+
+.divTableRow {
+    display: table-row;
+}
+.divTableRow .divTableCell {
+    text-align:center;
+    min-width: 150px;
+}
+.divTableRow .divTableCell:first-child {
+    min-width: 150px;
+    background-color: #10a9c4;
+    color:#fff;
+    text-align:right;
+}
+.divTableHeading {
+    background-color: #10a9c4;
+    display: table-header-group;
+}
+.divTableCell, .divTableHead {
+    border: 1px solid #e1f3ff;
+    display: table-cell;
+    padding: 3px 10px;
+}
+.divTableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+.divTableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+.divTableBody {
+    display: table-row-group;
+}
+.btn-trash {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
