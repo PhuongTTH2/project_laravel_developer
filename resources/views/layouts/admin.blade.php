@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="content-language" content="ja">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>AAA | @yield('title')</title>
+  <title>AAA 2| @yield('title')</title>
   <link rel="icon" href="/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="/css/admin/common.css?v={{ time() }}">

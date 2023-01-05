@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Company;
+use App\Models\User;
+use App\Mail\HelloMail;
+use Illuminate\Support\Facades\Mail;
 class CompaniesController extends Controller
 {
     /**
@@ -113,5 +116,13 @@ class CompaniesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function sendMail () {
+        $user = User::find(1) ;
+        $mail = new HelloMail('hello');
+        Mail::to('tthpspkt@gmail.com')->send($mail);
+        return true;
     }
 }
