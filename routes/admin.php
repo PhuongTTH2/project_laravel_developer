@@ -9,6 +9,7 @@ Route::domain(config('app.domain'))->group(function() {
             Route::prefix('company')->group(function() {
                 Route::get('/', 'CompaniesController@index')->name('company.index');
                 Route::get('/create', 'CompaniesController@create')->name('company.create');
+                Route::post('/update', 'CompaniesController@update')->name('company.update');
             });
         });
     });

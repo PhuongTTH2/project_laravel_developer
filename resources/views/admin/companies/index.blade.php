@@ -7,6 +7,8 @@
       <h3 class="bold">会社一覧</h3>
       <a href="{{ route('company.create') }}" class="btn_S" style="position: absolute; top: 0; right: 0;">新規登録</a>
       <div class="">
+          {{-- {{Session('keyA')}} --}}
+          {{Session::get('keyA')}}
         <label>会社名</label>
         <input type="text" id="company_name" name="company_name" size="30" maxlength="20" value="{{ Request()->company_name }}"/>
       </div>
@@ -40,6 +42,8 @@
               <span>すべて選択</span>
             </th>
             <th >
+                {{-- {{Session::get('variableName')}} --}}
+
             <input type="button" id="output_license" name="output_license" value="ライセンス一覧表出力" class="btn_S" style="width:200px" data-iziModal-open=".del_confirm" disabled>
             </th>
           </tr>
@@ -61,6 +65,7 @@
           @foreach ($companies as $c)
           <tr>
             <td>
+
               <input type="checkbox" style="display: none;" class="company_row" id="company_id_{{ $c->id }}" name="company_id" value="{{ $c->id }}">
               <label for="company_id_{{ $c->id }}"></label>
               <span>{{ $c->company_code }}</span>
@@ -84,4 +89,14 @@
 
   </form>
   @endif
+  <script src="/js/libs/bootstrap-notify.min.js"></script>
+  <script>
+    @if(Session::has('keyA'))
+  $.notify({
+    message: "{{ session('keyA') }}"
+  },{
+    type: 'success'
+  });
+@endif
+  </script>
 @endsection

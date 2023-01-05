@@ -1,0 +1,424 @@
+/***
+ schedule CSS
+ ***/
+
+#contents > .container {
+  padding-left: 0;
+  padding-right: 0;
+  transition: all 500ms 0s ease-in-out;
+}
+
+.container #table_box {
+  width: 100%;
+  position: relative;
+  padding-top: 130px;
+}
+
+#table_box #tables_container {
+}
+
+
+/* Table Headers */
+.table_headers {
+  max-height: 40px;
+  width: max-content;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  padding-left: 45px;
+  padding-right: 30px;
+  padding-top: 0px;
+  position: sticky;
+  top: 179px;
+  z-index: 2;
+  background-color: #f5f5f5;
+}
+.table_headers > table {
+  width: 270px;
+  display: inline-block;
+}
+
+@media all and (-ms-high-contrast: none) {
+.table_headers > table {
+  width: 270px;
+  display: inline-block;
+}
+}
+.table_headers table thead th {
+  height: 36px;
+  max-height: 36px;
+  vertical-align: middle;
+  color: #000;
+  text-align: center;
+}
+.table_headers > table > thead > tr > th:first-child {
+  width: 130px;
+  min-width: 130px;
+}
+.table_headers > table > thead > tr > th:last-child {
+  width: 140px;
+  min-width: 140px;
+}
+
+/**
+ *  番組表カラー
+ *  月:0,土:5,日:6
+ **/
+div#table_datas_thead th{
+ background-color:#d8d8d8;
+}
+
+#table_datas_thead th.weekId6,
+div#table_datas_thead th.holiday{
+ background-color:#e6b8b7;
+}
+#table_datas_thead th.weekId5{
+ background-color:#99ccff;
+}
+
+.generalWeekId0{
+  background-color:#e6b8b7 !important;
+}
+.generalWeekId6{
+background-color:#99ccff !important;
+}
+.holiday{
+  background-color:#e6b8b7 !important;
+}
+
+
+
+/* Time table */
+table.time_table {
+  background-color: #eee;
+  text-align: right;
+  color: #777;
+  font-size: 10px;
+  width: 40px;
+  max-height: 5800px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  left: 0px;
+  z-index: 1;
+  padding-top:20px;
+}
+table.time_table tr {
+  height: 60px;
+  border-bottom: solid 2px #eee;
+}
+table.time_table tr.dummy {
+  border-color: #eee;
+}
+table.time_table td {
+  padding-left: 8px;
+  padding-top: 2px;
+  vertical-align: top;
+  border-style: none !important;
+}
+
+
+/* Data table */
+.table_datas {
+  width: max-content;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: -o-max-content;
+  position: relative;
+}
+.table_datas {
+  display: inline-block;
+}
+.table_datas > table.schedule {
+  display: inline-block;
+  max-height: 5800px;
+  overflow-y: hidden;
+}
+.table_datas > table.schedule > tbody > tr > td {
+  vertical-align: top;
+  padding: 0;
+  max-width: 270px;
+  width: 270px !important;
+  border: none !important;
+}
+
+.table_datas table.schedule {
+    height:5800px;
+}
+
+.table_datas table.schedule td ul li {
+  border-bottom: solid 1px #ccc;
+  overflow: hidden;
+}
+.table_datas table.schedule td ul li.position_area {
+  overflow: visible;
+  padding-top: 4px;
+  width: 100%;
+  border-style: none !important;
+
+}
+.table_datas table.schedule td ul li.position_area span {
+  display:inline-block;
+  margin-top: -3px;
+  width: 100%;
+  position: relative;
+  top: -18px;
+  background-color:#d8d8d8;
+  cursor:pointer;
+}
+/* 曜日対応 */
+.table_datas table.schedule.weekId6 td ul li.position_area span,
+div.table_datas table.schedule.holiday td ul li.position_area span  {
+  background-color:#e5b8b7;
+}
+.table_datas table.schedule.weekId5 td ul li.position_area span {
+  background-color:#99ccff;
+}
+/* カート追加済み */
+.table_datas table.schedule td ul li.position_area span.is_add_cart {
+  background-color:#999;
+  color:#fff;
+}
+
+.table_datas table.schedule.weekId6 td ul li.position_area span.is_add_cart,
+div.table_datas table.schedule.holiday td ul li.position_area span.is_add_cart  {
+  background-color:#e58b8a;
+}
+.table_datas table.schedule.weekId5 td ul li.position_area span.is_add_cart {
+  background-color:#66b3ff;
+}
+
+
+
+.table_datas table.schedule td ul.program_data {
+  max-width: 130px;
+  width: 130px;
+  display: inline-block;
+  background-color: #fff;
+  padding-top:20px;
+  height:5800px;
+}
+.table_datas table.schedule td ul.program_data li {
+  padding: 0 10px;
+  word-break: break-all;
+}
+.program_data li:first-child {
+    border-top: solid 1px #ccc;
+}
+.table_datas table.schedule td ul.program_data li.popup {
+  position: relative;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.table_datas table.schedule td ul.program_data p.balloon {
+  display: none;
+  position: absolute;
+  width: 100px;
+  margin: 10px;
+  background-color: rgb(84, 196, 216);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  z-index: 10;
+  padding: 2px 4px;
+}
+.table_datas table.schedule td ul.program_data p.balloon:after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid rgb(84, 196, 216);
+}
+
+.table_datas table.schedule td ul.cm_data {
+  color: #333;
+  width: 69px;
+  margin: 0;
+  vertical-align: top;
+  display: inline-block;
+  margin-left: -4px;
+  background-color:#e6e6e6;
+}
+.table_datas table.schedule td ul.cm_data:nth-of-type(2){
+  border-right: solid 1px #ccc;
+}
+
+#table_datas_tbody.table_datas table.schedule.weekId6 td ul.cm_data{
+ background-color:#e6cfcf;
+}
+div#table_datas_tbody.table_datas table.schedule.holiday td ul.cm_data{
+ background-color:#e6cfcf;
+}
+#table_datas_tbody.table_datas table.schedule.weekId5 td ul.cm_data{
+ background-color:#cce6ff;
+}
+
+
+
+
+/* 放送休止枠 */
+.program_pause {
+  background-color: #a8a7a7;
+}
+
+/* Modal */
+.cm_cost_info {
+  max-width: 900px !important;
+  font-size: 15px;
+}
+.cm_cost_info .iziModal-content {
+  text-align: left;
+    padding: 20px 50px !important;
+}
+.cm_cost_info .iziModal-content h2 {
+  display: block;
+    font-size: 24px;
+    margin-top: 0;
+}
+.cm_cost_info .iziModal-content ul.search_info_list,
+.cm_cost_info .iziModal-content ul.search_info_list li {
+  display: inline-block;
+}
+.cm_cost_info .iziModal-content ul.search_info_list {
+  margin: 0 20px 10px 0;
+}
+.cm_cost_info .iziModal-content ul.search_info_list li {
+  margin-right: 10px;
+}
+.cm_cost_info .iziModal-content .contents_title,
+.cm_cost_info .iziModal-content .cm_cost_info_box {
+  border-bottom: solid 1px #7f7f7f;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.cm_cost_info .iziModal-content .select_container {
+  border: solid 1px #7f7f7f;
+    border-radius: 14px;
+}
+
+.cm_cost_info .iziModal-content .cm_cost_info_box table {
+  position: relative;
+  height: 100px;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td {
+  border: none !important;
+  padding: 5px 0;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td.space {
+  width: 600px !important;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .btn_M {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  background-color: #3cb14a !important;
+}
+
+
+.cm_cost_info .iziModal-content .cm_cost_info_box table td input[disabled].btn_M {
+  background: #999 !important;
+  color: #7f7f7f !important;
+}
+
+
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .status_is_cart_add {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  background-color: #fff !important;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .status_approval {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  background-color: #fff !important;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .status_sold_out {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  background-color: #fff !important;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .status_is_booked {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  background-color: #fff !important;
+}
+
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .btn_M:hover {
+  background-color: #3cb14a !important;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .status_is_cart_add:hover {
+  background-color: #fff !important;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .status_is_booked:hover {
+  background-color: #fff !important;
+}
+
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .cart_in {
+  background-color: #4d4d4d !important;
+}
+.cm_cost_info .iziModal-content .cm_cost_info_box table td .cart_in:hover {
+  background-color: #a6a6a6 !important;
+}
+.cm_cost_info .iziModal-content a {
+  display: block;
+    text-align: right;
+    margin-top: 20px;
+    color: #7f7f7f;
+}
+
+/* search_info */
+.search_info {
+  position: fixed;
+  background-color: #f5f5f5;
+  z-index: 3;
+  padding: 0 30px;
+}
+
+.search_info_wrap {
+  margin: 0 30px;
+  border-bottom: solid 1px #7f7f7f;
+  transition: all 500ms 0s ease-in-out;
+}
+
+.positon_list {
+  top: 145px;
+  left: 60px;
+}
+
+/**
+ *  IE Hack
+ **/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .table_headers {
+    margin-right: 0;
+  }
+  .table_headers > table > thead > tr > th:first-child {
+    width: 129px;
+    min-width: 129px;
+  }
+  .table_headers > table > thead > tr > th:last-child {
+    width: 67px;
+    max-width: 67px;
+  }
+
+  .table_datas table.schedule td ul.cm_data {
+    color: #333;
+    width: 70px;
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: -4px;
+    background-color:#e6e6e6;
+  }
+  table.time_table {
+    margin-bottom:50px;
+  }
+}
+
+
+

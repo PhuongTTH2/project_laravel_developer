@@ -20,17 +20,19 @@ class RedirectIfAuthenticated
     public function handle(Request $request, Closure $next, ...$guards)
     {
         $guards = empty($guards) ? [null] : $guards[0];
-        // dd($guards);
         switch ($guards) {
             case 'admin' :
                 if (Auth::guard($guards)->check()) {
                     return redirect()->route('company.index');
                 }
                 break;
-            default:
+            case 'user':
                 if (Auth::guard($guards)->check()) {
                     return redirect()->route('home');
                 }
+                break;
+            default:
+                abort(403, 'Unauthorized action.');
                 break;
         }
         return $next($request);
