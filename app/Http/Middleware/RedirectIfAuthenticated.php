@@ -20,13 +20,14 @@ class RedirectIfAuthenticated
     public function handle(Request $request, Closure $next, ...$guards)
     {
         $guards = empty($guards) ? [null] : $guards[0];
+
         switch ($guards) {
             case 'admin' :
                 if (Auth::guard($guards)->check()) {
                     return redirect()->route('company.index');
                 }
                 break;
-            case 'user':
+            case 'web':
                 if (Auth::guard($guards)->check()) {
                     return redirect()->route('home');
                 }

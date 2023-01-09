@@ -12,6 +12,11 @@ Route::domain(config('app.domain'))->group(function() {
                 Route::post('/update', 'CompaniesController@update')->name('company.update');
                 Route::get('/send-mail', 'CompaniesController@sendMail')->name('login.end-mail');
             });
+            Route::prefix('upload')->group(function() {
+                Route::get('/', 'UploadController@index')->name('upload.index');
+                Route::post('/', 'UploadController@doUpload')->name('upload.doUpload');
+
+            });
         });
     });
 });

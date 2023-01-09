@@ -42,6 +42,7 @@ class LoginController extends Controller
     }
 
     protected function guard(){
+        //RedirectIfAuthenticated
         return Auth::guard('web');
     }
 

@@ -26,6 +26,7 @@ class AuthController extends Controller
     }
 
     protected function guard(){
+        //RedirectIfAuthenticated
         return Auth::guard('admin');
     }
 
