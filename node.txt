@@ -1,2 +1,3 @@
 add debug bar
 composer require barryvdh/laravel-debugbar
+php artisan make:request Admin/CompaniesUpdate

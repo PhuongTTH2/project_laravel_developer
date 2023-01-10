@@ -9,6 +9,8 @@ use App\Models\User;
 use App\Mail\HelloMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\Admin\CompaniesUpdate;
+
 class CompaniesController extends Controller
 {
     /**
@@ -78,9 +80,9 @@ class CompaniesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(CompaniesUpdate $request)
     {
-
+        // dd($request);
         // try {
         //     DB::beginTransaction();
         //     $company = (!$request->company_id) ? new Company() : Company::find($request->company_id);
