@@ -1,3 +1,18 @@
 add debug bar
 composer require barryvdh/laravel-debugbar
+
+php artisan make:model Post
 php artisan make:request Admin/CompaniesUpdate
+php artisan make:observer PostObserver --model=Post
+
+
+//event
+php artisan event:generate  or  php artisan make:event DemoEvent or php artisan make:listener DemoListener --event=DemoListener
+php artisan queue:listen
+
+php artisan queue:table
+php artisan migrate
+
+
+//command
+php artisan make:command AbstractImportCommand

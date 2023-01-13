@@ -23,6 +23,9 @@ class CompaniesController extends Controller
         $companies=[];
 
         $request->session()->put('keyA', 'valueA');
+        event(new \App\Events\DemoEvent('Phuong'));
+        $helper = _date2Str(11 );
+        // dd($helper);
         return view('admin.companies.index',['companies'=>  $companies]);
     }
 
